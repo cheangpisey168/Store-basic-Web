@@ -1,11 +1,12 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-blue-500 text-white text-3xl font-bold">
-    Tailwind CSS is Working!
-  </div>
+    <div> 
+      <h2>This is Home page</h2>
+    </div>
 </template>
 
-
 <script setup>
+import { NuxtLink } from '#components';
+
 
 </script>
 
