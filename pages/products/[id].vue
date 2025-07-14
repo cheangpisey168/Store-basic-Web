@@ -1,6 +1,10 @@
 <template>
     <div>
-        <h3>{{ product.title }}</h3>
+        <Head>
+            <Title>Nuxt 3 | {{ product.title }}</Title>
+            <Meta name="description" :content="product.description" />
+        </Head>
+        <ProductDetail :productDetail="product"/>
     </div>
 </template>
 
@@ -11,6 +15,10 @@
     })
     const url = "https://fakestoreapi.com/products/"+id;
     const {data: product} = await useFetch(url , { key : id });
+
+    if(!product.value){
+        throw createError({statusCode:404 , statusMessage: "Product not found !", fatal:true})
+    }
 </script>
 
 <style lang="scss" scoped>

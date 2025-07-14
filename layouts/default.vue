@@ -6,11 +6,12 @@
         <NuxtLink to="/" class="text-2xl font-bold text-blue-600">
           Logo
         </NuxtLink>
-        <nav class="hidden md:flex space-x-6">
-          <NuxtLink to="/" class="text-gray-700 hover:text-blue-600 font-medium">Home</NuxtLink>
-          <NuxtLink to="/about" class="text-gray-700 hover:text-blue-600 font-medium">About</NuxtLink>
-          <NuxtLink to="/products" class="text-gray-700 hover:text-blue-600 font-medium">Products</NuxtLink>
-        </nav>
+        
+        <ul class="hidden md:flex space-x-6">
+         <li> <NuxtLink to="/" class="text-gray-700 hover:text-blue-600 font-medium">Home</NuxtLink></li>
+          <li><NuxtLink to="/about" class="text-gray-700 hover:text-blue-600 font-medium">About</NuxtLink></li>
+          <li><NuxtLink to="/products" class="text-gray-700 hover:text-blue-600 font-medium btn">Products</NuxtLink></li>
+        </ul>
       </div>
     </header>
 

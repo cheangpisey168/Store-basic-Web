@@ -2,7 +2,7 @@
     <div>
         <div class="grid grid-cols-4 gap-5">
             <div v-for="p in products">
-                <NuxtLink :to="`/products/${p.id}`">{{ p.title }}</NuxtLink>
+                <ProductCard :productCard="p" />
             </div>
         </div>
     </div>
@@ -13,6 +13,12 @@
         layout: "products"
     })
     const {data : products } = await useFetch("https://fakestoreapi.com/products")
+    useHead({
+        title:'Canadia | Bank',
+        meta:[
+            {name:'description',content:'Nuxt js 3'}
+        ]
+    })
 </script>
 
 <style lang="scss" scoped>
